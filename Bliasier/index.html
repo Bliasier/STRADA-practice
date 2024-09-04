@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+  <template id="template">
+    <li class="user-message message">
+      <p class="messageText">Добрый день!</p>
+      <span class="message_time">18:45</span>
+    </li>
+  </template>
+
+    <div class="container">
+      <div class="top">
+        <button id="settings">Настройки</button>
+        <button id="close">Выйти</button>
+      </div>
+
+      <ul class="chat" >
+
+
+      </ul>
+
+      <form class="message-input">
+        <input type="text" id="write-message" placeholder="write message or @ for link" />
+        <button id="submit-message">-></button>
+      </form>
+
+      <div id="setting-modal" class="modal-link">
+        <div class="setting-body">
+          <div class="setting-container">
+            <button id="settings-close"  class="setting-close close-btn">x</button>
+            <div class="setting-title">Настройки</div>
+            <form class="setting-content">
+              <label for="choose-name">Имя в чате</label>
+              <input type="text" id="choose-name" />
+              <button id="change-name-btn">-></button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="auth-modal" class="modal-link">
+        <div class="auth-body">
+          <div class="auth-container">
+            <button id="auth-close" class="auth-close close-btn">x</button>
+            <div class="auth-title">Авторизация</div>
+            <form class="auth-content">
+              <label for="input-mail">Почта</label>
+              <input type="text" id="input-mail" />
+              <button id="get-code">Получить код</button>
+              <button id="enter-code-btn">Ввести код</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="submit-modal" class="modal-link">
+        <div class="submit-body">
+          <div class="submit-container">
+            <button id="submit-close" class="submit-close close-btn">x</button>
+            <div class="submit-title">Подтверждение</div>
+            <form class="submit-content">
+              <label for="input-token">Код</label>
+              <input type="text" id="input-token"  />
+              <button id="enter-btn">Войти</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="link-modal" class="link-modal">
+        <div class="link-body">
+          <div class="link-container">
+            <p class="user-name"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script type="module" src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"></script>
+  </body>
+</html>

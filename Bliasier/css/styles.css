@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+
+:root {
+  --roboto: "Roboto", sans-serif;
+  --UserMessage: #caea90;
+  --PartnerMessage: #90caea;
+  --ChatDate: rgba(215, 255, 238, 0.45);
+  --unread: rgba(202, 234, 144, 0.77);
+  --popup: rgba(0, 0, 0, 0);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+input {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--roboto);
+}
+
+.container {
+  width: 320px;
+  min-height: 533px;
+  padding: 7px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+}
+
+.bottom {
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.chat {
+  background-image: url("/FR-6/Bliasier/images/bg.jpg");
+  border-radius: 10px;
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 437px;
+  padding: 7px;
+  gap: 7px;
+  border: 1px solid;
+}
+
+#settings,
+#close,
+#submit-message,
+#change-name-btn,
+#get-code,
+#enter-code-btn,
+#enter-btn {
+  padding: 5px;
+  min-width: 29px;
+  font-family: var(--roboto);
+  font-size: 1rem;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+#change-name-btn,
+#get-code,
+#enter-code-btn,
+#enter-btn {
+  min-height: 32px;
+}
+
+#submit-message {
+  min-height: 32px;
+  margin-left: 6px;
+}
+
+#write-message {
+  margin-top: 10px;
+  min-width: 267px;
+  min-height: 32px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.user-message,
+.partner-message {
+  border-radius: 10px;
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  padding: 5px;
+}
+
+.chat-date {
+  border-radius: 10px;
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  padding: 5px;
+  align-self: center;
+  background-color: var(--ChatDate);
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: var(--UserMessage);
+}
+
+.partner-message {
+  background-color: var(--PartnerMessage);
+}
+
+.unread {
+  background-color: var(--unread);
+}
+
+.link-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--popup);
+  visibility: hidden;
+}
+
+.message_time {
+  display: block;
+  margin-top: 5px;
+  text-align: end;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+#setting-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--popup);
+  visibility: hidden;
+}
+
+#auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--popup);
+  visibility: hidden;
+}
+
+#submit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--popup);
+  visibility: hidden;
+}
+
+.setting-body,
+.submit-body,
+.auth-body{
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.setting-container,
+.submit-container,
+.auth-container {
+  border-radius: 10px;
+  width: 273px;
+  min-height: 319px;
+  padding: 14px;
+  background-color: white;
+  position: relative;
+}
+
+.link-container{
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100px;
+  width: 273px;
+  min-height: 319px;
+  padding: 14px;
+  background-image: url("/FR-6/Bliasier/images/bg.jpg");
+  position: relative;
+  margin-top: 183px;
+}
+
+.link-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.setting-close,
+.submit-close,
+.auth-close {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+}
+
+a.setting-close,
+.submit-close,
+.auth-close {
+  color: grey;
+  font-weight: bold;
+}
+
+#choose-name,
+#input-mail,
+#input-token {
+  border-radius: 10px;
+  width: 207px;
+  min-height: 32px;
+  border: 1px solid;
+}
+
+.setting-content,
+.submit-content,
+.auth-content {
+  margin-top: 17px;
+}
+
+#choose-name,
+#input-mail,
+#input-token {
+  margin-top: 7px;
+  margin-right: 5px;
+}
